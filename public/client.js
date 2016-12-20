@@ -5,5 +5,9 @@
 // add other scripts at the bottom of index.html
 
 $(function() {
-  console.log('hello world :o');
+  $('#reload').click(function() {
+    $.get("point?id=100", function(data) {
+      $('#point100').text(data);
+    });
+  });
 });
